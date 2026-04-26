@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مجموعة الزعيم العالمية | دليل المبيعات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dim: #8B6914;
+    --navy: #0A1628;
+    --navy-mid: #0F2040;
+    --navy-light: #152850;
+    --steel: #1E3A5F;
+    --white: #F8F5EE;
+    --white-dim: rgba(248,245,238,0.7);
+    --accent: #E8441A;
+    --green: #2ECC71;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    background: rgba(201,168,76,0.08);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topbar-contact {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .topbar-contact a {
+    color: var(--white-dim);
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .topbar-contact a:hover { color: var(--gold); }
+  .topbar-iso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 4px;
+    padding: 4px 12px;
+  }
+  .topbar-iso span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .topbar-iso .iso-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 9px;
+    font-weight: 900;
+    padding: 2px 6px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+  }
+
+  /* HERO HEADER */
+  .hero {
+    background: linear-gradient(135deg, #0A1628 0%, #0F2040 40%, #152850 100%);
+    padding: 50px 40px 44px;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid var(--gold);
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -40px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  /* LOGO */
+  .logo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .logo-container {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 16px;
+    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-img {
+    height: 52px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(201,168,76,0.3));
+  }
+  .logo-text-block {
+    text-align: right;
+    border-right: 2px solid var(--gold);
+    padding-right: 16px;
+  }
+  .logo-text-block .co-name {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .logo-text-block .co-sub {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 6px 20px;
+    border-radius: 2px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: clamp(26px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero p {
+    color: var(--white-dim);
+    font-size: 14px;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* TRUST BADGES */
+  .trust-strip {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 30px;
+    padding: 7px 16px;
+    font-size: 12px;
+    color: var(--white-dim);
+  }
+  .trust-badge .icon { font-size: 14px; }
+  .trust-badge strong { color: var(--gold); font-size: 12px; }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-label { font-size: 11px; color: var(--white-dim); letter-spacing: 1px; }
+
+  /* CATEGORIES */
+  .categories {
+    display: flex;
+    gap: 10px;
+    padding: 20px 40px;
+    overflow-x: auto;
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    scrollbar-width: none;
+  }
+  .categories::-webkit-scrollbar { display: none; }
+  .cat-btn {
+    white-space: nowrap;
+    padding: 8px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(201,168,76,0.3);
+    background: transparent;
+    color: var(--white-dim);
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.25s;
+    flex-shrink: 0;
+  }
+  .cat-btn:hover, .cat-btn.active {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* SEARCH */
+  .search-wrap {
+    padding: 18px 40px;
+    background: var(--navy-mid);
+  }
+  .search-box {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: var(--navy-light);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-box input::placeholder { color: rgba(248,245,238,0.35); }
+  .search-box input:focus { border-color: var(--gold); }
+  .search-icon {
+    position: absolute;
+    left: 16px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 18px;
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* FAQ ITEM */
+  .faq-grid { display: flex; flex-direction: column; gap: 12px; }
+
+  .faq-item {
+    background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.2s;
+  }
+  .faq-item:hover {
+    border-color: rgba(201,168,76,0.4);
+    transform: translateX(-3px);
+  }
+  .faq-item.open {
+    border-color: var(--gold);
+    box-shadow: 0 8px 40px rgba(201,168,76,0.1);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .faq-num {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 28px;
+    opacity: 0.6;
+  }
+  .faq-q-text {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.5;
+  }
+  .faq-arrow {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    color: var(--gold);
+    font-size: 14px;
+  }
+  .faq-item.open .faq-arrow {
+    background: var(--gold);
+    color: var(--navy);
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 0 24px 24px 24px;
+    padding-right: 68px;
+  }
+  .faq-item.open .faq-answer {
+    display: block;
+    animation: fadeSlide 0.3s ease;
+  }
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .answer-card {
+    background: rgba(10,22,40,0.6);
+    border-right: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  .answer-card p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(248,245,238,0.88);
+  }
+  .answer-card strong { color: var(--gold-light); font-weight: 700; }
+  .answer-card .highlight {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 13px;
+    color: var(--gold-light);
+    margin: 2px;
+  }
+  .answer-card .green { color: var(--green); font-weight: 600; }
+  .answer-card .accent { color: var(--accent); font-weight: 600; }
+
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .tag {
+    background: rgba(46,204,113,0.1);
+    border: 1px solid rgba(46,204,113,0.25);
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+  .tag.warning {
+    background: rgba(232,68,26,0.1);
+    border-color: rgba(232,68,26,0.25);
+    color: #FF6B4A;
+  }
+
+  /* CATEGORY SEPARATOR */
+  .cat-header {
+    margin: 40px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .cat-header-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .cat-header-text h3 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .cat-header-text span { font-size: 12px; color: var(--gold); }
+
+  .faq-item.hidden { display: none; }
+
+  /* COMPANY INFO CARD */
+  .company-card {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.03) 100%);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  .cc-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .cc-label {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .cc-value {
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .cc-value a { color: var(--gold-light); text-decoration: none; }
+  .cc-value a:hover { text-decoration: underline; }
+  .cc-divider {
+    grid-column: 1/-1;
+    height: 1px;
+    background: rgba(201,168,76,0.15);
+  }
+
+  /* SERVICES STRIP */
+  .services-strip {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .svc-tag {
+    background: rgba(21,40,80,0.8);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: var(--white-dim);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .svc-tag .dot {
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    padding: 32px 40px 24px;
+    text-align: center;
+  }
+  .footer-logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .footer-logo { height: 40px; filter: brightness(0.9); }
+  .footer-name {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .footer-links a {
+    color: var(--white-dim);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(248,245,238,0.25);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 700px) {
+    .topbar { padding: 8px 16px; }
+    .hero { padding: 36px 20px 32px; }
+    .categories { padding: 14px 16px; }
+    .search-wrap { padding: 12px 16px; }
+    .container { padding: 20px 14px 60px; }
+    .faq-answer { padding-right: 24px; }
+    .company-card { grid-template-columns: 1fr; }
+    .logo-container { flex-direction: column; text-align: center; }
+    .logo-text-block { border-right: none; border-top: 1px solid rgba(201,168,76,0.3); padding-right: 0; padding-top: 10px; text-align: center; }
+    .footer { padding: 24px 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-contact">
+    <a href="mailto:bossglobalgroup@gmail.com">📧 bossglobalgroup@gmail.com</a>
+    <a href="https://wa.me/96877741110">💬 77741110</a>
+    <a href="https://bossglobalgroup.net" target="_blank">🌐 bossglobalgroup.net</a>
+  </div>
+  <div class="topbar-iso">
+    <span class="iso-badge">ISO</span>
+    <span>شركة معتمدة دولياً</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="logo-wrap">
+    <div class="logo-container">
+      <img src="https://bossglobalgroup.net/logo_ltr.png" alt="Boss Global Group" class="logo-img" onerror="this.style.display='none'">
+      <div class="logo-text-block">
+        <div class="co-name">مجموعة الزعيم العالمية</div>
+        <div class="co-sub">Boss Global Group — Oman</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-badge">دليل فريق المبيعات</div>
+  <h1>إجابات <span>قوية ومقنعة</span><br>لكل سؤال العميل</h1>
+  <p>دليل شامل ومحترف للرد على جميع استفسارات وتحفظات العملاء — مدعوم بخبرة <strong style="color:var(--gold)">أكثر من 30 عاماً</strong> في مجال المعدات الثقيلة بسلطنة عُمان</p>
+
+  <div class="trust-strip">
+    <div class="trust-badge"><span class="icon">🏅</span> <strong>ISO معتمد</strong> دولياً</div>
+    <div class="trust-badge"><span class="icon">📍</span> <strong>مسقط</strong>، سلطنة عُمان</div>
+    <div class="trust-badge"><span class="icon">📡</span> تتبع <strong>GPS</strong> للمعدات</div>
+    <div class="trust-badge"><span class="icon">✅</span> حسابات موثّقة <strong>Meta</strong></div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-num">30+</span><span class="stat-label">سنة خبرة</span></div>
+    <div class="stat"><span class="stat-num">65+</span><span class="stat-label">سؤال وجواب</span></div>
+    <div class="stat"><span class="stat-num">8</span><span class="stat-label">محاور رئيسية</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">شفافية وثقة</span></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="categories">
+  <button class="cat-btn active" onclick="filterCat('all')">الكل</button>
+  <button class="cat-btn" onclick="filterCat('guarantees')">الضمانات والعقود</button>
+  <button class="cat-btn" onclick="filterCat('pricing')">التسعير والتمويل</button>
+  <button class="cat-btn" onclick="filterCat('returns')">الدخل والعائد</button>
+  <button class="cat-btn" onclick="filterCat('risks')">المخاطر والحماية</button>
+  <button class="cat-btn" onclick="filterCat('operations')">التشغيل والصيانة</button>
+  <button class="cat-btn" onclick="filterCat('trust')">الثقة والمصداقية</button>
+  <button class="cat-btn" onclick="filterCat('contact')">التواصل</button>
+  <button class="cat-btn" onclick="filterCat('equipment')">المعدات والمواصفات</button>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-box">
+    <input type="text" placeholder="ابحث عن سؤال..." onkeyup="searchFAQ(this.value)">
+    <span class="search-icon">🔍</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <!-- COMPANY INFO CARD -->
+  <div class="company-card">
+    <div class="cc-item">
+      <span class="cc-label">الشركة</span>
+      <span class="cc-value">مجموعة الزعيم العالمية للمعدات الثقيلة</span>
+    </div>
+    <div class="cc-item">
+      <span class="cc-label">الموقع</span>
+      <span class="cc-value">مسقط، سلطنة عُمان</span>
+    </div>
+    <div class="cc-item">
+      <span class="cc-label">سنوات الخبرة</span>
+      <span class="cc-value">+30 سنة في القطاع</span>
+    </div>
+    <div class="cc-divider"></div>
+    <div class="cc-item">
+      <span class="cc-label">الاعتمادية</span>
+      <span class="cc-value">شهادة ISO دولية + حسابات موثّقة Meta</span>
+    </div>
+    <div class="cc-item">
+      <span class="cc-label">التواصل</span>
+      <span class="cc-value">
+        <a href="https://wa.me/96877741110">واتساب: 77741110</a><br>
+        <a href="mailto:bossglobalgroup@gmail.com">bossglobalgroup@gmail.com</a>
+      </span>
+    </div>
+    <div class="cc-item">
+      <span class="cc-label">الموقع الإلكتروني</span>
+      <span class="cc-value"><a href="https://bossglobalgroup.net" target="_blank">bossglobalgroup.net</a></span>
+    </div>
+  </div>
+
+  <!-- SERVICES STRIP -->
+  <div class="services-strip">
+    <div class="svc-tag"><span class="dot"></span>توفير المعدات الثقيلة</div>
+    <div class="svc-tag"><span class="dot"></span>شراء بدون دفعة أولى</div>
+    <div class="svc-tag"><span class="dot"></span>تمويل بالأقساط الشهرية</div>
+    <div class="svc-tag"><span class="dot"></span>صيانة كاملة قبل التسليم</div>
+    <div class="svc-tag"><span class="dot"></span>تتبع GPS للمعدات</div>
+    <div class="svc-tag"><span class="dot"></span>فحص قبل الاستلام</div>
+    <div class="svc-tag"><span class="dot"></span>خدمات التأمين</div>
+    <div class="svc-tag"><span class="dot"></span>الفحص الحكومي والترخيص</div>
+    <div class="svc-tag"><span class="dot"></span>توفير السائقين</div>
+    <div class="svc-tag"><span class="dot"></span>فرص عمل للمعدات</div>
+  </div>
+
+  <!-- ===== GUARANTEES ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">🛡️</div>
+    <div class="cat-header-text"><h3>الضمانات والعقود</h3><span>ما يحمي العميل ويضمن حقوقه</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="guarantees">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">01</span>
+        <span class="faq-q-text">ما هي الضمانات المقدمة عند شراء المعدات؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نقدم لكم منظومة ضمان متكاملة على ثلاثة مستويات:<br><br>
+          <strong>أولاً — ضمان المعدة:</strong> ضمان شامل على المعدة وفق شروط الوكيل المعتمد، يشمل قطع الغيار والأعطال الجوهرية. وكل معدة تمرّ بـ<strong>فحص كامل قبل التسليم</strong> من قِبل فريق بوس جلوبال المعتمد.<br><br>
+          <strong>ثانياً — ضمان التشغيل:</strong> عقد تشغيل موثق مع شركات راسخة ومعتمدة يضمن توظيف المعدة في مشاريع حقيقية بدخل منتظم — وذلك من خلال خدمة <strong>فرص العمل للمعدات</strong> التي تتميز بها بوس جلوبال.<br><br>
+          <strong>ثالثاً — ضمان الشفافية:</strong> تقارير دورية عن أداء المعدة وحالتها ودخلها عبر نظام تتبع GPS المتكامل، حتى تكون على اطلاع كامل من أي مكان في أي وقت.
+          </p>
+          <div class="tag-row">
+            <span class="tag">✔ فحص معتمد قبل التسليم</span>
+            <span class="tag">✔ عقد تشغيل موثق</span>
+            <span class="tag">✔ تتبع GPS شامل</span>
+            <span class="tag">✔ ISO معتمد دولياً</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="guarantees">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">02</span>
+        <span class="faq-q-text">هل هناك عقود تشغيل مضمونة قبل شراء المعدة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — هذا بالضبط ما يميز مجموعة الزعيم العالمية. <strong>نعرض عليك فرص التشغيل المتاحة قبل إتمام الشراء</strong>، حتى تعرف أين ستعمل معدتك ومتى تبدأ في تحقيق الدخل. لدينا خدمة مخصصة تُسمى <strong>"فرص عمل للمعدات"</strong> تربط معدتك بالمشاريع الكبرى داخل السلطنة. العميل الواعي يسأل عن هذا أولاً — وهذا هو نهجنا منذ أكثر من 30 عاماً.</p>
+          <div class="tag-row"><span class="tag">✔ فرص تشغيل معروضة مسبقاً</span><span class="tag">✔ مشاريع داخل السلطنة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="guarantees">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">03</span>
+        <span class="faq-q-text">أنتم تقولوا في عقود، طيب إيش يضمن لي إنها ما تكون كلام على ورق؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>سؤال ذكي جداً، وهو بالضبط ما يميز العميل الحكيم. <strong>عقودنا موثقة قانونياً وقابلة للتنفيذ القضائي</strong>. مجموعة الزعيم العالمية شركة عُمانية رائدة بسجل تجاري ممتد لأكثر من 30 عاماً — وهذا التاريخ الطويل هو أقوى ضمان. الأطراف مُقيّدون بالتزامات واضحة وعقوبات صريحة عند الإخلال. الورق الذي لا يُنفَّذ ليس عقداً — ما نقدمه التزام قانوني حقيقي من شركة لها وزن واسم في السوق العُماني.</p>
+          <div class="tag-row"><span class="tag">✔ موثق قانونياً</span><span class="tag">✔ قابل للتنفيذ القضائي</span><span class="tag">✔ 30+ سنة سمعة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="guarantees">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">04</span>
+        <span class="faq-q-text">هل توجد رسوم مخفية أو تكاليف إضافية غير مذكورة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p><strong>لا — ولا نقبل ذلك مبدأً.</strong> كل التكاليف مفصّلة كتابةً قبل التوقيع: سعر المعدة، رسوم الصيانة، هيكل تقسيم الدخل، وأي تكاليف تشغيلية محتملة. مجموعة الزعيم العالمية حاصلة على <strong>شهادة ISO الدولية</strong> التي تُلزمها بمعايير الشفافية والجودة. <span class="green">الشفافية التامة هي حجر الأساس لعلاقتنا معك منذ أكثر من 30 عاماً.</span></p>
+          <div class="tag-row"><span class="tag">✔ لا رسوم مخفية</span><span class="tag">✔ شفافية ISO معتمدة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="guarantees">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">05</span>
+        <span class="faq-q-text">هل في غرامات أو شروط مخفية في العقود؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>لا توجد شروط مخفية من جهتنا إطلاقاً. <strong>بل العكس تماماً</strong> — العقد يحتوي على غرامات تحمي حقوقك أنت في حال أخلّت الشركة المشغّلة بالتزاماتها تجاهك. كل بند في العقد مقروء ومفهوم. نوصيك بمراجعة مستشار قانوني مستقل قبل التوقيع — لأننا واثقون تماماً من نزاهة ما نقدمه.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== PRICING & FINANCE ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">💰</div>
+    <div class="cat-header-text"><h3>التسعير والتمويل</h3><span>لماذا السعر ما هو عليه وكيف تموّل</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">06</span>
+        <span class="faq-q-text">لماذا تبيعون الحفار بسعر أعلى من سعره في السوق؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا سؤال وجيه يستحق إجابة واضحة. <strong>أنت لا تشتري حفاراً فقط — أنت تشتري مشروعاً متكاملاً من مجموعة الزعيم العالمية:</strong><br><br>
+          المعدة من السوق = حديد بلا عمل + بدون ضمان + بدون تشغيل.<br>
+          المعدة من بوس جلوبال = معدة + <span class="highlight">فحص كامل قبل التسليم</span> + فرصة تشغيل + تتبع GPS + تأمين + ترخيص حكومي + صيانة + سائق + متابعة + دخل شهري.<br><br>
+          الفارق في السعر هو ثمن <strong>المنظومة الكاملة</strong> التي تحوّل المعدة إلى مصدر دخل فوري. هل تفضّل توفير مبلغاً بسيطاً الآن، أم تحصل على دخل يغطي الفارق في الأشهر الأولى؟</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">07</span>
+        <span class="faq-q-text">ليش أسعاركم أغلى من السوق؟ أنا شايف نفس المعدة أرخص بكثير!</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>ممتاز أنك تقارن — هذا يدل على وعيك. لكن <strong>قارن المتشابه بالمتشابه</strong>: السعر الأرخص في السوق هو لمعدة فقط — بدون فحص معتمد، بدون عقد تشغيل، بدون تأمين، بدون ترخيص حكومي، بدون تتبع GPS، بدون سائق، بدون إدارة. عندما تجمع تكلفة كل هذه الخدمات التي تقدمها بوس جلوبال، ستجد أن ما نقدمه <span class="green">أوفر وأكثر أماناً</span> على المدى البعيد. الثمن الحقيقي هو العائد وليس الرقم في الفاتورة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">08</span>
+        <span class="faq-q-text">هل أنتم تقومون بتمويل المعدات بشكل مباشر؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>مجموعة الزعيم العالمية تعمل مع شبكة من <strong>البنوك وشركات التمويل المعتمدة</strong>، ولدينا خدمة صريحة تُسمى <strong>"التمويل بالأقساط الشهرية"</strong> وخدمة <strong>"الشراء بدون دفعة أولى"</strong> وفق شروط متفق عليها. دورنا أن نسهّل عليك مسيرة التمويل بالكامل: نوجهك للجهة الأنسب لنوع وحجم المعدة، نساعدك في تجهيز الملفات، ونتابع معك حتى الحصول على الموافقة.</p>
+          <div class="tag-row"><span class="tag">✔ شراء بدون دفعة أولى</span><span class="tag">✔ أقساط شهرية مرنة</span><span class="tag">✔ شراكة مع بنوك معتمدة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">09</span>
+        <span class="faq-q-text">لو البنك رفض يمولني، إيش الحل؟ ولا بس تضيعوا وقتي؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>لا نضيع وقتك أبداً — هذا ليس أسلوب بوس جلوبال. إذا رفض بنك واحد، <strong>لدينا شبكة من الخيارات</strong>: بنوك أخرى، جهات تمويل متخصصة في المعدات، أو مراجعة الملف معك لمعرفة سبب الرفض وإصلاحه. وفي بعض الحالات قد نستطيع تهيئة هيكل دفع مرن عبر خيار <strong>"الشراء بدون دفعة أولى"</strong> الذي نقدمه. ما نريده هو أن ينجح مشروعك.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">10</span>
+        <span class="faq-q-text">هل يمكن دفع جزء من قيمة المعدة والباقي من دخلها؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا نموذج تحب أن تسمعه! وهو بالفعل <strong>ما يُطبّقه كثير من عملائنا الناجحين</strong>. هيكل الدفع يُناقش بناءً على وضعك المالي — ونقدم خياري "الشراء بدون دفعة أولى" و"التمويل بالأقساط الشهرية" من خلال شركائنا الممولين. في بعض الحالات يمكن تصميم هيكل يجعل المعدة تموّل نفسها جزئياً من دخلها الشهري. نناقش تفاصيل ذلك في جلسة خاصة بك.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">11</span>
+        <span class="faq-q-text">كم أنتم تأخذوا ربح من الصفقة؟ أحس السعر فيه مبالغة!</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>مجموعة الزعيم العالمية مؤسسة تجارية وطبيعي أن تحقق هامش ربح — هذا ليس سراً. <strong>ما يهمك هو: هل ما تدفعه يستحق ما تحصل عليه؟</strong> نعرض عليك حساباً واضحاً: سعر المعدة، العائد المتوقع، الجدول الزمني لاسترداد رأس المال. اسألني عن صافي عائدك وليس عن هامش ربحنا — ذلك هو المقياس الحقيقي.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pricing">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">12</span>
+        <span class="faq-q-text">ليش ما تعطوني عرض واضح بالسعر بدل اللف والدوران؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>حقك تماماً — ونعتذر إن شعرت بذلك. <strong>سنعطيك عرضاً مكتوباً</strong> يتضمن: سعر المعدة بالتفصيل، هيكل العائد، الجدول الزمني، شروط العقد، وكل التكاليف. طلب العرض المكتوب حق لك ونلتزم بتقديمه. تواصل معنا عبر واتساب <strong>77741110</strong> أو بالبريد الإلكتروني.</p>
+          <div class="tag-row"><span class="tag">✔ عرض مكتوب مفصّل</span><span class="tag">✔ واتساب: 77741110</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== RETURNS ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">📈</div>
+    <div class="cat-header-text"><h3>الدخل والعائد</h3><span>حقيقة الأرقام والتوقعات المنطقية</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="returns">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">13</span>
+        <span class="faq-q-text">إذا كانت المعدات تحقق دخل شهري، لماذا لا تستفيدون منها بأنفسكم؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>سؤال ذكي يطرحه كثيرون! الجواب بسيط: <strong>نموذج عمل مجموعة الزعيم العالمية قائم على خدمة العملاء وليس تملّك الأصول</strong>. نحن نكسب من خدمات البيع والتشغيل والإدارة — وهذا يجعلنا شريكاً مستمراً في نجاحك لأن سمعتنا التي بنيناها على مدى 30 عاماً مرتبطة برضاك. من يمتلك المعدة يتحمل المخاطر ويجني العوائد — وهذا ما يناسبك أنت كمستثمر يريد بناء ثروة حقيقية.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="returns">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">14</span>
+        <span class="faq-q-text">تضمن لي دخل شهري ثابت ولا بس كلام تسويق؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نُقدّر صراحتك ونردّ بصراحة مثلها. <strong>لا يوجد استثمار بلا مخاطرة في الدنيا.</strong> ما نقدمه هو بيئة مُهيّأة لتحقيق الدخل: عقد تشغيل حقيقي عبر خدمة "فرص عمل للمعدات"، شركات مشغّلة موثوقة، ومتابعة مستمرة مع تقارير دورية. الأرقام التاريخية لعملائنا على مدى 30 عاماً تُظهر دخلاً منتظماً — لكننا لن نعدك بمبالغ وهمية. سنعطيك نطاق توقعات واقعي بناءً على نوع المعدة وطبيعة العقد.</p>
+          <div class="tag-row"><span class="tag warning">⚠ لا ضمان مطلق</span><span class="tag">✔ أرقام تاريخية حقيقية</span><span class="tag">✔ 30 سنة من التجربة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="returns">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">15</span>
+        <span class="faq-q-text">كم المدة المتوقعة لاسترداد رأس المال من المشروع؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>يتفاوت ذلك بحسب نوع المعدة وحجم العقود. <strong>بشكل عام:</strong> المعدات الثقيلة (حفارات، جرافات، رافعات) تسترد رأس مالها في نطاق <span class="highlight">3 - 5 سنوات</span>، بينما يتراوح العمر التشغيلي للمعدة بين <span class="highlight">10,000 - 20,000 ساعة عمل</span> أي ما يُعادل 10 - 15 سنة مع صيانة منتظمة — مما يعني سنوات طويلة من الدخل الصافي بعد الاسترداد. نعطيك جدولاً مالياً تفصيلياً في عرضك الخاص.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="returns">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">16</span>
+        <span class="faq-q-text">يعني أفهم من كلامك إن الربح مو مضمون؟ طيب ليش أدخل من الأساس؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>لأن الفرق بين الاستثمار الذكي والمضاربة هو <strong>مستوى التحكم في المخاطر</strong>. نحن لا نبيعك أسهماً في السوق — نبيعك أصلاً حقيقياً (معدة مُفحوصة ومُرخّصة) مرتبطاً بعقد تشغيل مع شركة حقيقية داخل السلطنة، بدخل مستند لعمل فعلي. الخطر موجود دائماً، لكنه هنا <span class="green">محدود ومقيّد بعقد</span> وليس مرتهناً بمزاج السوق. وبوس جلوبال معك في كل خطوة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="returns">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">17</span>
+        <span class="faq-q-text">إذا السوق وقف أو صار فيه ركود، إيش بيصير في الدخل؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>سؤال استراتيجي ممتاز. قطاع البنية التحتية والمقاولات في سلطنة عُمان — وهو الميدان الرئيسي لمعداتنا وللمشاريع الكبرى التي تُشغَّل فيها المعدات كمشروع آدم-هيمة-ثمريت، ومشاريع الطرق، وميناء مصيرة — <strong>من أكثر القطاعات استقراراً حتى في فترات الركود</strong>. ومع ذلك، عقودنا تتضمن بنوداً تتعلق بحالات القوة القاهرة توضح حقوق وواجبات كل طرف. نحن صادقون: الركود الحاد يؤثر — لكنه لا يُصفّر الدخل.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="returns">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">18</span>
+        <span class="faq-q-text">هل توفرون تقارير عن أداء المعدة والدخل؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>تقارير دورية منتظمة</strong> تتضمن: ساعات تشغيل المعدة، العقود النشطة، المبالغ المحصّلة، والمصروفات إن وجدت. وعبر نظام <strong>تتبع GPS</strong> المتكامل الذي تتميز به بوس جلوبال، تعرف في أي وقت وأي مكان أين معدتك وكيف تعمل — مباشرة من هاتفك. الشفافية ليست خياراً عندنا — هي التزام تُرسّخه شهادة ISO التي نحملها.</p>
+          <div class="tag-row"><span class="tag">✔ تقارير دورية</span><span class="tag">✔ تتبع GPS مباشر</span><span class="tag">✔ إدارة عن بُعد</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== RISKS ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">⚖️</div>
+    <div class="cat-header-text"><h3>المخاطر والحماية</h3><span>ماذا يحدث في أسوأ السيناريوهات</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="risks">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">19</span>
+        <span class="faq-q-text">لو ما حصلت شغل للمعدة، من يتحمل الخسارة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا السيناريو مُعالَج في العقد بشكل صريح. <strong>عقد التشغيل يحدد التزامات الشركة المشغّلة</strong> في توفير العمل للمعدة وفق الشروط المتفق عليها. إذا أخلّت الشركة بالتزاماتها، فهي مُلزَمة قانونياً بالتعويض. دور بوس جلوبال هو أن تساعدك في إيجاد بديل فوري من خلال خدمة "فرص عمل للمعدات". لهذا السبب لا نعمل إلا مع شركات تشغيل ذات ملاءة مالية وسجل مثبت.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="risks">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">20</span>
+        <span class="faq-q-text">ما هي نسبة المخاطرة في هذا النوع من الاستثمار؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>الاستثمار في المعدات مع عقود تشغيل <strong>يُصنَّف ضمن الاستثمارات متوسطة المخاطر</strong> — أدنى من الأسهم والعملات، وأعلى من الودائع البنكية. ما يجعله مختلفاً هو وجود أصل حقيقي بقيمة سوقية، وعقد يُلزم الطرف الآخر، ونظام GPS يتيح المراقبة المستمرة. <span class="green">الشفافية تعني أن تعرف المخاطر قبل أن تقرر — وهذا ما تلتزم به بوس جلوبال.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="risks">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">21</span>
+        <span class="faq-q-text">لو المشروع فشل، هل أنتم تتحملوا شيء ولا كله على العميل؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>المعدة ملك لك — والربح لك — والخسارة كذلك في نهاية المطاف. <strong>هذا هو الاستثمار الحقيقي.</strong> لكن دور بوس جلوبال لا ينتهي عند البيع: نتابع معك، نحلّ المشكلات، نبحث عن فرص بديلة، ونضغط على الشركة المشغّلة قانونياً إذا لزم. لسنا شركاء في الخسارة المالية، لكننا شركاء في الحل دائماً — وهذا ما يعنيه الدعم الذي نقدمه منذ 30 عاماً.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="risks">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">22</span>
+        <span class="faq-q-text">ماذا يحدث إذا لم أتمكن من سداد الأقساط؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا سؤال يجب أن تطرحه قبل الشراء وليس بعده — <strong>ونُقدّر أنك تفكر باتزان.</strong> في حال تعثّر الأقساط، الخطوة الأولى هي التواصل مع بوس جلوبال فوراً عبر واتساب <strong>77741110</strong> لاستكشاف الحلول: إعادة هيكلة الأقساط، تعليق مؤقت، أو بيع المعدة لتصفية الالتزام. الخيار الأسوأ هو الصمت. نحن هنا للمساعدة — ليس لمصادرة أصولك.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="risks">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">23</span>
+        <span class="faq-q-text">إيش أسوأ سيناريو ممكن يصير في هذا الاستثمار؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نحترم صراحتك ونردّ بصراحة: <strong>أسوأ سيناريو</strong> هو أن تتعطل المعدة تعطلاً كبيراً وتخلّ الشركة المشغّلة بالتزاماتها في نفس الوقت. في هذه الحالة: الصيانة الكاملة قبل التسليم تُقلّل هذا الاحتمال، ضمان المعدة يغطي الإصلاح، والعقد يُلزم الشركة بالتعويض، ودور بوس جلوبال إيجاد بديل فوري. الأصل (المعدة) لا يزال موجوداً وقابلاً للبيع في أي وقت. <span class="green">لديك دائماً مخرج.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="risks">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">24</span>
+        <span class="faq-q-text">ماذا يحدث إذا تأخرت الشركات في دفع مستحقات تأجير المعدات؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا مُتناوَل صراحةً في العقد. <strong>التأخير يُرتّب غرامات على الشركة المشغّلة</strong> تصبّ في مصلحتك. دور بوس جلوبال هو متابعة التحصيل والضغط على الشركة بالوسائل القانونية والتجارية. اخترنا شركاءنا من المشغّلين بعناية لتجنّب هذا السيناريو — لكنه مُعالَج في حال وقوعه.</p>
+          <div class="tag-row"><span class="tag">✔ غرامات تأخير في العقد</span><span class="tag">✔ متابعة تحصيل مستمرة</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== OPERATIONS ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">⚙️</div>
+    <div class="cat-header-text"><h3>التشغيل والصيانة</h3><span>كيف تعمل المعدة وكيف تُصان</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">25</span>
+        <span class="faq-q-text">ماذا يحدث إذا تعطلت المعدة أثناء التشغيل؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>لدى بوس جلوبال بروتوكول واضح: <strong>إبلاغ فوري → تقييم العطل → إصلاح سريع</strong>. كل معدة تُسلَّم بعد <strong>صيانة كاملة قبل التسليم</strong> تشمل الجانب الميكانيكي والكهربائي والتقني — ما يُقلّل الأعطال بشكل كبير. الأعطال ضمن فترة الضمان يُغطيها الوكيل المعتمد مجاناً. خارج الضمان نُعالجها بقطع غيار أصلية. ونظام GPS يُنبّهنا فوراً لأي شذوذ في أداء المعدة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">26</span>
+        <span class="faq-q-text">هل يوجد عقد صيانة سنوي أو باقة صيانة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>نقدم صيانة كاملة قبل التسليم</strong> وخدمات صيانة دورية شاملة تتضمن الفحوصات الدورية، تغيير الزيوت والفلاتر، وفحص الأنظمة الهيدروليكية. الصيانة الوقائية تمنع 80% من الأعطال الكبيرة وتطيل عمر المعدة بشكل ملحوظ. هذا استثمار في حماية استثمارك الأكبر.</p>
+          <div class="tag-row"><span class="tag">✔ صيانة كاملة قبل التسليم</span><span class="tag">✔ صيانة دورية متاحة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">27</span>
+        <span class="faq-q-text">هل يمكنني اختيار الشركة التي ستقوم بتشغيل المعدة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>أنت صاحب القرار النهائي</strong>. نعرض عليك الخيارات المتاحة من شركات مشغّلة معتمدة مع ملف كل شركة، وأنت تختار من تثق به. قرارك هو قرارك. خدمة <strong>"فرص عمل للمعدات"</strong> في بوس جلوبال تُقدّم لك خيارات حقيقية ومتعددة من مشاريع داخل السلطنة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">28</span>
+        <span class="faq-q-text">هل أحتاج خبرة سابقة لإدارة هذا المشروع؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p><strong>لا — هذا بالضبط ما تقدمه بوس جلوبال.</strong> نحن نتولى الجانب التقني والتشغيلي بالكامل. دورك هو مالك الأصل الذي يراقب أداءه عبر تقارير دورية ونظام GPS من هاتفك. لا تحتاج أن تعرف كيف تشغّل حفاراً — تحتاج أن تفهم كيف تقرأ تقرير الأداء وتأخذ قرارات استثمارية ذكية. فريقنا ذو الخبرة 30 عاماً يُعلّمك ذلك.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">29</span>
+        <span class="faq-q-text">هل يمكن إدارة المشروع عن بعد؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>هذا هو جوهر ما تقدمه بوس جلوبال.</strong> نظام <strong>GPS للتتبع عبر الهاتف</strong> يُتيح لك مراقبة موقع وحركة معدتك بدقة عالية من أي مكان في العالم. عملاؤنا من مختلف المدن والدول يديرون استثماراتهم عبر التقارير الدورية والتواصل المستمر مع فريقنا. المعدة لا تحتاج حضورك — هي تحتاج إدارة محترفة، وهذا ما نتولاه بحلول تقنية حديثة.</p>
+          <div class="tag-row"><span class="tag">✔ تتبع GPS من الهاتف</span><span class="tag">✔ تقارير إلكترونية</span><span class="tag">✔ إدارة كاملة عن بُعد</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">30</span>
+        <span class="faq-q-text">هل يمكن تشغيل المعدة خارج المدينة أو خارج السلطنة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>التشغيل خارج المدينة ممكن وشائع — المشاريع الكبرى كمشروع آدم-هيمة-ثمريت ومشاريع مصيرة وظفار غالباً في مناطق بعيدة. <strong>التشغيل خارج السلطنة يستلزم دراسة قانونية خاصة</strong> تشمل تصاريح الاستيراد والضرائب والعقود المحلية. بوس جلوبال تقدم الدعم الكامل في حال كان هذا مطلوباً بحكم خبرتها الإقليمية الممتدة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="operations">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">31</span>
+        <span class="faq-q-text">هل توفرون سائقين للمعدات؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>توفير السائقين المحترفين</strong> خدمة رسمية تقدمها مجموعة الزعيم العالمية. نُوفّر سائقين مؤهلين مع <strong>نقل الكفالة القانوني والسريع</strong>. هذا يعني أنك لا تحتاج للبحث عن سائق في السوق — نتولى ذلك بالكامل كجزء من منظومة الخدمات المتكاملة.</p>
+          <div class="tag-row"><span class="tag">✔ توفير سائقين محترفين</span><span class="tag">✔ نقل كفالة قانوني وسريع</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== TRUST ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">🤝</div>
+    <div class="cat-header-text"><h3>الثقة والمصداقية</h3><span>لماذا تختار بوس جلوبال وما يميزها</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="trust">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">32</span>
+        <span class="faq-q-text">هناك من يقول إن الشركة غير موثوقة، ما ردكم؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نثمّن أنك تتحرى قبل أن تقرر — هذا دليل وعيك. ردّنا مباشر: <strong>لا تصدّق ولا تُكذّب — تحقّق.</strong> اطلب منا: السجل التجاري، <strong>شهادة ISO الدولية</strong>، وثيقة التحقق من Meta، قائمة بعملاء سابقين يمكنك التواصل معهم، أو زُر موقعنا الإلكتروني <strong>bossglobalgroup.net</strong> وحسابات التواصل الاجتماعي الرسمية الموثّقة. شركة بـ<strong>30 سنة في السوق العُماني</strong> لا تحتاج للادعاء — السجل يتكلم.</p>
+          <div class="tag-row"><span class="tag">✔ ISO معتمد دولياً</span><span class="tag">✔ حسابات موثّقة Meta</span><span class="tag">✔ 30+ سنة سجل تجاري</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="trust">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">33</span>
+        <span class="faq-q-text">هل في عميل قبلي فعلاً نجح معكم؟ ولا كله كلام؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>ولدينا عملاء يتحدثون عن تجربتهم بشكل مباشر.</strong> يمكننا تزويدك بأرقام للتواصل معهم — ليس شهادات مكتوبة يمكن تلفيقها، بل محادثة حقيقية مع شخص مرّ بنفس تساؤلاتك. شركة عُمانية رائدة بـ30 عاماً من العمل في قطاع المعدات الثقيلة — يعني عشرات المشاريع والعملاء الموثّقين. تواصل معنا وسنوصلك بمن يُقنعك.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="trust">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">34</span>
+        <span class="faq-q-text">بصراحة… إيش يخليني أثق فيكم وأختاركم بدل أي شركة ثانية؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>لا نطلب منك أن تثق بنا على الكلام — <strong>نطلب منك أن تُقارن بالمعايير الحقيقية:</strong><br><br>
+          هل الشركة الأخرى حاصلة على <strong>ISO دولي</strong>؟ هل لديها <strong>GPS تتبع</strong>؟ هل تُقدّم <strong>فحصاً قبل التسليم</strong> موثّقاً؟ هل تُوفّر السائقين والتأمين والترخيص الحكومي؟ هل حساباتها <strong>موثّقة من Meta</strong>؟ هل لديها <strong>30 سنة</strong> من التواجد في السوق العُماني؟<br><br>
+          <span class="green">قارن بأمانة وبنفس المعايير — والجواب سيأتيك من المقارنة لا من كلامنا.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="trust">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">35</span>
+        <span class="faq-q-text">إيش الفرق الحقيقي بينكم وبين أي سمسار معدات في السوق؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>السمسار: يبيع ويختفي. بوس جلوبال: تبيع وتبقى. <strong>الفرق الجوهري:</strong><br><br>
+          السمسار يوصّل بائعاً بمشترٍ — نقطة. مجموعة الزعيم العالمية تبني مشروعاً متكاملاً: تختار المعدة، تفحصها، تُرخّصها، توفّر سائقها، تؤمّنها، تُشغّلها، تتابع أداءها بـGPS، وتحصّل العائد — كل ذلك بخبرة <strong>30 عاماً</strong> في السوق العُماني وشهادة <strong>ISO دولية</strong> تُثبت جودة كل خطوة.</p>
+          <div class="tag-row"><span class="tag">✔ منظومة متكاملة 10 خدمات</span><span class="tag">✔ شراكة طويلة الأمد</span><span class="tag">✔ ISO معتمد</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="trust">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">36</span>
+        <span class="faq-q-text">لو جيت الشركة، هل فعلاً بشوف نفس الكلام ولا بس تسويق؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p><strong>تعال وشوف بنفسك — هذه هي أقوى دعوة نقدمها.</strong> زر مقرّنا في مسقط، تحدث مع الفريق، اطلب رؤية العقود الفعلية وملفات المعدات وشهادة ISO وتقارير GPS. ما تراه على <strong>bossglobalgroup.net</strong> يجب أن تراه هناك. إذا وجدت فجوة — فأنت محق في التحفظ. إذا وجدت تطابقاً — فستخرج بيقين حقيقي.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="trust">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">37</span>
+        <span class="faq-q-text">هل في منافسين لكم يقدموا نفس الخدمة بسعر أقل؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>ربما — السوق واسع. لكن <strong>السؤال الصحيح هو: ماذا يقدمون مقابل ذلك السعر الأقل؟</strong> هل نفس ضمانات التشغيل؟ هل شهادة ISO؟ هل GPS للتتبع؟ هل فحص قبل التسليم موثّق؟ هل توفير السائقين؟ هل التأمين؟ هل الترخيص الحكومي؟ هل 30 عاماً من الخبرة؟ ندعوك للمقارنة الكاملة — ليس فقط السعر. الأرخص في اللحظة ليس دائماً الأوفر في النهاية.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">📞</div>
+    <div class="cat-header-text"><h3>التواصل مع الأقسام</h3><span>من تتصل به لكل احتياج</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="contact">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">38</span>
+        <span class="faq-q-text">هل يمكن إرسال جميع التفاصيل عبر الواتساب بدل الاتصال؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>واتساب مجموعة الزعيم العالمية الرسمي: <a href="https://wa.me/96877741110" style="color:var(--gold-light)">77741110</a></strong>. يمكنك إرسال استفساراتك وطلباتك، وسيردّ عليك المختص المعني خلال وقت قصير. يمكنك أيضاً التواصل عبر البريد الإلكتروني <strong>bossglobalgroup@gmail.com</strong> أو زيارة <strong>bossglobalgroup.net</strong>. التواصل المريح لك هو الأفضل لنا.</p>
+          <div class="tag-row"><span class="tag">✔ واتساب: 77741110</span><span class="tag">✔ bossglobalgroup@gmail.com</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="contact">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">39</span>
+        <span class="faq-q-text">كيف يمكنني التواصل مع قسم الصيانة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>للتواصل مع قسم الصيانة: <strong>أبلغ مندوب المبيعات الخاص بك أولاً</strong> عبر واتساب <strong>77741110</strong>، وسيُحيلك فوراً لمسؤول الصيانة. في الحالات العاجلة، لدينا خط مباشر للصيانة الطارئة يُقدَّم لك عند الشراء. الاستجابة السريعة في الأعطال هي أولويتنا — وذلك جزء من معايير ISO التي نلتزم بها.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="contact">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">40</span>
+        <span class="faq-q-text">كيف يمكنني التواصل مع الإدارة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نؤمن بسياسة <strong>"الباب المفتوح"</strong>. يمكنك طلب لقاء مباشر مع الإدارة عبر مندوبك أو عبر المقر الرئيسي في مسقط، أو عبر البريد <strong>bossglobalgroup@gmail.com</strong>. شكاوى العملاء أو ملاحظاتهم الجوهرية تصل للإدارة مباشرة — لأنها الطريقة الوحيدة للتطوير المستمر وفق معايير ISO.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="contact">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">41</span>
+        <span class="faq-q-text">كيف أضمن إن الشركات اللي تشغّل المعدة ما تضحك عليّ؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا السؤال يحمل وعياً حقيقياً. <strong>أربعة أشياء تحميك مع بوس جلوبال:</strong><br><br>
+          1. العقد الموثق الذي يُحدد الالتزامات بشكل قانوني قابل للتنفيذ.<br>
+          2. نظام <strong>GPS التتبع</strong> الذي يُراقب موقع وحركة المعدة فعلياً على مدار الساعة.<br>
+          3. التقارير الدورية التي تُطابق الأرقام المُعلنة بالأرقام الفعلية.<br>
+          4. وجود بوس جلوبال كطرف ثالث بخبرة 30 عاماً يضمن حقوقك ويُساءل الشركة المشغّلة عند أي إخلال.<br><br>
+          <span class="green">أنت لست وحدك في هذه المعادلة — بوس جلوبال معك.</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== EQUIPMENT ===== -->
+  <div class="cat-header">
+    <div class="cat-header-icon">🏗️</div>
+    <div class="cat-header-text"><h3>المعدات والمواصفات</h3><span>ما المتاح وما المناسب لك</span></div>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">42</span>
+        <span class="faq-q-text">ما هي أنواع وموديلات المعدات المتوفرة لديكم؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>مجموعة الزعيم العالمية تتخصص في <strong>المعدات الثقيلة للبنية التحتية والمقاولات</strong>، وتشمل:<br><br>
+          حفارات، لودرات، جرافات، كمبكتورات (رولات)، مسويّات (جريدرات)، شاحنات، خلاطات خرسانة، صهاريج، مقطورات، رافعات، رافعات شوكية، تاور كرين، كسارات، معدات أسفلت، لودرات صغيرة، مطارق هيدروليكية، دلاء، وغيرها.<br><br>
+          الموديلات المتاحة تتغير بحسب المخزون — ندعوك لجلسة عرض مخصصة أو تفقّد <strong>سوق المعدات</strong> على موقعنا bossglobalgroup.net</p>
+          <div class="tag-row">
+            <span class="tag">✔ حفارات</span><span class="tag">✔ جرافات</span><span class="tag">✔ رافعات</span>
+            <span class="tag">✔ شاحنات</span><span class="tag">✔ لودرات</span><span class="tag">✔ وأكثر</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">43</span>
+        <span class="faq-q-text">هل توفرون تقارير فحص مفصلة للمعدة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — خدمة <strong>"الفحص الشامل قبل الاستلام"</strong> هي خدمة رسمية في مجموعة الزعيم العالمية. كل معدة مصحوبة بتقرير فحص تقني شامل يتضمن: الحالة الميكانيكية، الهيدروليك، ساعات التشغيل المسجّلة، وسجل الصيانة التاريخي. الفحص يتم لضمان الشفافية ورضا العميل الكامل — وهو جزء من التزامنا بمعايير <strong>ISO الدولية</strong>.</p>
+          <div class="tag-row"><span class="tag">✔ فحص شامل قبل الاستلام</span><span class="tag">✔ تقرير تقني موثّق</span><span class="tag">✔ معيار ISO</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">44</span>
+        <span class="faq-q-text">كم العمر الافتراضي المتوقع للمعدة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>يتراوح العمر التشغيلي للمعدات الثقيلة بين <span class="highlight">10,000 – 20,000 ساعة عمل</span>، ما يُعادل في الغالب <strong>10 - 15 سنة</strong> مع صيانة منتظمة. <strong>الصيانة الكاملة قبل التسليم</strong> التي تقدمها بوس جلوبال تضمن أن تستلم معدتك بأعلى كفاءة تشغيلية — مما يُطيل عمرها ويُعظّم دخلك.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">45</span>
+        <span class="faq-q-text">هل يشمل السعر التأمين على المعدة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>مجموعة الزعيم العالمية تقدم <strong>خدمة التأمين</strong> بالتعاون مع شركات تأمين معتمدة كخدمة رسمية منفصلة. التأمين يغطي الأضرار الجسيمة والحريق والسرقة. التأمين ليس رفاهية — هو ضرورة في المعدات الثقيلة، وننصح به بشدة. يُضاف للعرض الشامل حسب احتياجك.</p>
+          <div class="tag-row"><span class="tag">✔ خدمة تأمين رسمية متاحة</span><span class="tag">✔ شركات تأمين معتمدة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">46</span>
+        <span class="faq-q-text">هل يوجد دعم في استخراج التراخيص الحكومية؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>نعم — <strong>خدمة الفحص الحكومي والترخيص</strong> خدمة رسمية من مجموعة الزعيم العالمية. نتولى فحص وتسجيل وترخيص المعدة لدى الجهات الحكومية المعنية قبل التسليم. أنت تستلم معدتك جاهزة للعمل قانونياً — بدون إجراءات مرهقة من جهتك.</p>
+          <div class="tag-row"><span class="tag">✔ فحص وترخيص حكومي</span><span class="tag">✔ تسليم جاهز للعمل</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">47</span>
+        <span class="faq-q-text">ما الفرق بين شراء المعدة منكم وشرائها من السوق مباشرة؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p><strong>من السوق:</strong> تحصل على معدة فقط — بدون ضمانات، بدون تشغيل، بدون دعم.<br><br>
+          <strong>من مجموعة الزعيم العالمية:</strong> تحصل على معدة + فحص شامل قبل الاستلام + صيانة كاملة قبل التسليم + ترخيص حكومي + تأمين + تتبع GPS + توفير سائق + فرص تشغيل مباشرة + تقارير دورية + دعم ما بعد البيع — كل ذلك بشهادة <strong>ISO دولية</strong> وخبرة <strong>30 عاماً</strong>.<br><br>
+          <span class="green">نحن لا نبيع معدات — نبيع مشاريع استثمارية متكاملة جاهزة للعمل.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">48</span>
+        <span class="faq-q-text">هل يمكني بيع المعدة لاحقًا إذا أردت الخروج من المشروع؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>بالطبع — <strong>المعدة ملكك وأنت حر في بيعها متى أردت</strong>. بوس جلوبال تساعدك في تقييم سعرها العادل وإيجاد المشتري المناسب. المعدات المُشغَّلة مع سجل تشغيلي نظيف وتقارير GPS موثّقة تُباع بأسعار جيدة في السوق. حق الخروج مكفول لك في أي وقت — ونُسهّل إجراءات نقل الملكية بشكل كامل.</p>
+          <div class="tag-row"><span class="tag">✔ حق البيع دائماً متاح</span><span class="tag">✔ نقل ملكية بدعم كامل</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">49</span>
+        <span class="faq-q-text">ما أفضل معدة للاستثمار للمبتدئين؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>لكل مستثمر وضع مختلف — لا توجد إجابة واحدة تناسب الجميع. <strong>لكن للمبتدئين عموماً</strong>: المعدات متوسطة الحجم ذات الطلب العالي كالحفارات متوسطة الحجم أو شاحنات الحمل — تجمع بين دخل مستقر وتكاليف صيانة معقولة. تفقّد <strong>سوق المعدات</strong> على موقع bossglobalgroup.net، ثم نُقيّم وضعك المالي وأهدافك ونوصيك بالخيار الأنسب في جلسة مخصصة مجانية.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="equipment">
+      <div class="faq-question" onclick="toggle(this)">
+        <span class="faq-num">50</span>
+        <span class="faq-q-text">لو أنا عندي مبلغ أقل، ليش ما تساعدوني بدل ما ترفضوا؟</span>
+        <span class="faq-arrow">▾</span>
+      </div>
+      <div class="faq-answer">
+        <div class="answer-card">
+          <p>هذا هو بالضبط ما تحاول بوس جلوبال. <strong>لا نرفض العميل بسبب ميزانيته — نُعيد هيكلة الحل ليناسبها.</strong> ربما معدة بحجم أصغر من السوق الواسع الذي نعرضه، أو هيكل تمويلي مختلف عبر خيار "الشراء بدون دفعة أولى" أو "الأقساط الشهرية"، أو جدول شراء مرحلي. الرفض الحقيقي هو أن نبيعك ما لا يناسب وضعك — هذا ما لا تفعله بوس جلوبال.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo-row">
+    <img src="https://bossglobalgroup.net/logo_ltr.png" alt="Boss Global Group" class="footer-logo" onerror="this.style.display='none'">
+    <span class="footer-name">مجموعة الزعيم العالمية</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://bossglobalgroup.net/en" target="_blank">الموقع الإلكتروني</a>
+    <a href="https://wa.me/96877741110">واتساب: 77741110</a>
+    <a href="mailto:bossglobalgroup@gmail.com">bossglobalgroup@gmail.com</a>
+    <a href="https://bossglobalgroup.net/en/about-us" target="_blank">عن الشركة</a>
+    <a href="https://bossglobalgroup.net/en/contact-us" target="_blank">تواصل معنا</a>
+  </div>
+  <div class="footer-copy">دليل فريق المبيعات — للاستخدام الداخلي المهني · مجموعة الزعيم العالمية · مسقط، سلطنة عُمان · ISO معتمد دولياً</div>
+</div>
+
+<script>
+function toggle(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+function filterCat(cat) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.faq-item').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+      item.classList.remove('open');
+    }
+  });
+  document.querySelectorAll('.cat-header').forEach(h => {
+    h.style.display = cat === 'all' ? '' : 'none';
+  });
+}
+
+function searchFAQ(val) {
+  const q = val.trim().toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const text = item.innerText.toLowerCase();
+    item.classList.toggle('hidden', q && !text.includes(q));
+  });
+}
+</script>
+</body>
+</html>
